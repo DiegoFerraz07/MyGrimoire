@@ -124,7 +124,7 @@ function Login() {
     }
   }
   function renderButton() {
-    if (this.state.isLoading) {
+    if (isLoading) {
       return <LoadingButton color="#FFF" />;
     }
     return (
@@ -135,7 +135,7 @@ function Login() {
   }
 
   function renderMessage() {
-    const {message} = this.state;
+    
 
     if (!message) {
       return null;
@@ -155,14 +155,14 @@ function Login() {
           <FormRow first>
             <InputLogin
               placeholder="user@mail.com"
-              value={this.state.mail}
+              value={mail}
               onChangeText={value => this.onChangeHandler('mail', value)}
             />
           </FormRow>
           <FormRow last>
             <InputLogin
               placeholder="********"
-              value={this.state.password}
+              value={password}
               secureTextEntry
               onChangeText={value => this.onChangeHandler('password', value)}
             />

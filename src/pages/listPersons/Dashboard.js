@@ -149,15 +149,11 @@ class Dashboard extends Component {
     }
 }
 
-const mapDispatchToProps = {
-    tryLogout,
-    setPersons,
-    getUser
-}
+
 
 const mapStateToProps = state => {
     return state;
 }
 
 //make this component available to the app
-export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
+export default Dashboard;

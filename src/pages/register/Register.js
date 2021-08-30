@@ -5,7 +5,7 @@ import CardForm from '../../components/cards/CardForm';
 import FormRow from '../../components/forms/FormRow';
 
 import { connect } from 'react-redux';
-import { tryRegister } from '../../actions';
+
 import { 
     ImageHeader, 
     ImageBackground, 
@@ -143,9 +143,7 @@ class Login extends React.Component {
     }
 };
 
-const mapDispatchToProps = {
-    tryRegister
-}
+
 
 //make this component available to the app
-export default connect(null, mapDispatchToProps)(Login);
+export default Login;

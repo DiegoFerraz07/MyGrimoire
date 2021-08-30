@@ -433,9 +433,6 @@ const styles = StyleSheet.create({
     }
 });
 
-const mapDispatchToProps = {
-    salvarPersonagem
-}
 
 const mapStateToProps = state => {
     const { user } = state;
@@ -443,4 +440,4 @@ const mapStateToProps = state => {
 }
 
 //make this component available to the app
-export default connect(mapStateToProps, mapDispatchToProps)(AddPerson);
+export default AddPerson;
