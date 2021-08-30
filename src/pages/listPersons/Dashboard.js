@@ -11,7 +11,7 @@ import firebase from 'firebase';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { connect } from 'react-redux';
-import { tryLogout, setPersons, getUser } from '../../actions';
+
 
 import CardPersonagem from '../../components/cards/CardPersonagem';
 import AddPersonagem from '../../components/AddPersonagem';

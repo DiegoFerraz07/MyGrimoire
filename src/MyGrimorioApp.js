@@ -10,7 +10,6 @@ import {PersistGate} from 'redux-persist/integration/react';
 
 import firebase from 'firebase';
 
-import rootReducer from './reducers';
 import {MenuProvider} from 'react-native-popup-menu';
 
 const store = createStore(
@@ -34,7 +33,7 @@ export class MyGrimorioApp extends Component {
 
   render() {
     return (
-      <Provider store={store}>
+      <Provider >
         <MenuProvider>
           <Router />
         </MenuProvider>

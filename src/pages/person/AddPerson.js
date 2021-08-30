@@ -25,7 +25,7 @@ import classesAdd from '../../../resources/data/js/classesAdd';
 import requisitoMultiClasse from '../../../resources/data/js/requisitoMultiClasse';
 
 import { createPerson, NIVEIS, getNameAtributo, getBonusProficiencia } from '../../../resources/data/js/utils';
-import { salvarPersonagem } from '../../actions';
+
 
 import LinePickerAddPerson from '../../components/lines/LinePickerAddPerson';
 

@@ -3,10 +3,10 @@ import 'react-native-gesture-handler';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 
-import Login from './pages/home/Login';
-import Register from './pages/home/Register';
-import Dashboard from './pages/home/Dashboard';
-import Home from './pages/Tabs/home/Home';
+import Login from './pages/login/Login';
+import Register from './pages/register/Register';
+import Dashboard from './pages/listPersons/Dashboard';
+
 
 import {BottomTabNavigator} from './pages/Navigations/bottom/BottomTabNavigation';
 import AddPerson from './pages/person/AddPerson';
