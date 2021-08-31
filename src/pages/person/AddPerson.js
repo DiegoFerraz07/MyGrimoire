@@ -25,7 +25,7 @@ import classesAdd from '../../../resources/data/js/classesAdd';
 import requisitoMultiClasse from '../../../resources/data/js/requisitoMultiClasse';
 
 import { createPerson, NIVEIS, getNameAtributo, getBonusProficiencia } from '../../../resources/data/js/utils';
-import { salvarPersonagem } from '../../actions';
+
 
 import LinePickerAddPerson from '../../components/lines/LinePickerAddPerson';
 
@@ -433,9 +433,6 @@ const styles = StyleSheet.create({
     }
 });
 
-const mapDispatchToProps = {
-    salvarPersonagem
-}
 
 const mapStateToProps = state => {
     const { user } = state;
@@ -443,4 +440,4 @@ const mapStateToProps = state => {
 }
 
 //make this component available to the app
-export default connect(mapStateToProps, mapDispatchToProps)(AddPerson);
+export default AddPerson;

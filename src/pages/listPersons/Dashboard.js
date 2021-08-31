@@ -11,7 +11,7 @@ import firebase from 'firebase';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { connect } from 'react-redux';
-import { tryLogout, setPersons, getUser } from '../../actions';
+
 
 import CardPersonagem from '../../components/cards/CardPersonagem';
 import AddPersonagem from '../../components/AddPersonagem';
@@ -149,15 +149,11 @@ class Dashboard extends Component {
     }
 }
 
-const mapDispatchToProps = {
-    tryLogout,
-    setPersons,
-    getUser
-}
+
 
 const mapStateToProps = state => {
     return state;
 }
 
 //make this component available to the app
-export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
+export default Dashboard;
