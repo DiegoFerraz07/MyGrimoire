@@ -16,7 +16,7 @@ import {
   ContainerApp,
 } from './styles';
 
-import {connect} from 'react-redux';
+
 
 import CardForm from '../../components/cards/CardForm';
 import CardFormFooter from '../../components/cards/CardFormFooter';
