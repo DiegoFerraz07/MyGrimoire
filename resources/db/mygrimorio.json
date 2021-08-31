@@ -5083,321 +5083,334 @@
     }
   } 
 ],
-  "users": {
-    "dihferraz-01@hotmail.com": {
+  "users": [
+    {
+      "id": "ApZqh2lRENc43CpU3O9S8qthq4R2",
       "nome": "Diego",
-      "senha": "123456",
-      "key": "ApZqh2lRENc43CpU3O9S8qthq4R2" 
+      "email": "dihferraz-01@hotmail.com",
+      "senha": "123456" 
     },
-    "randlersi@gmail.com": {
+    {
+
+      "id": "fm3svBMxXpgiOtGizKQ3FquGzCD3",
       "nome": "Randler",
-      "senha": "123456",
-      "key": "fm3svBMxXpgiOtGizKQ3FquGzCD3"
+      "email": "randlersi@gmail.com",
+      "senha": "123456"
     }
-  },
-  "persons" : {
-    "ApZqh2lRENc43CpU3O9S8qthq4R2" : {
-      "-MfJc3j9aJsHwT5__rAE" : {
-        "antecedent" : "Acólito",
-        "antecedentTraces" : {
-          "connections" : "Tudo o que faço, faço pelo povo.",
-          "defects" : "Meu pensamento é inflexível.",
-          "ideals" : "Caridade. Eu sempre tento ajudar aqueles em necessidade, não importando o custo pessoal. (Bom)",
-          "personality" : "Eu idolatro um herói particular da minha fé, e constantemente me refiro a seus feitos e exemplos."
-        },
-        "attributes" : {
-          "charisma" : "14",
-          "constitution" : "20",
-          "dexterity" : "12",
-          "intelligency" : "10",
-          "knowledge" : "10",
-          "strength" : "20"
-        },
-        "name" : "Krivghar",
-        "race" : "Meio-Orc",
-        "tendency" : "Caótico e Bom"
-      }
+  ],
+  "persons" : [
+
+    {
+      "id": "ApZqh2lRENc43CpU3O9S8qthq4R2",
+      "my_persons" :[
+        {
+          "id": "-MfJc3j9aJsHwT5__rAE",
+          "antecedent" : "Acólito",
+          "antecedentTraces" : {
+            "connections" : "Tudo o que faço, faço pelo povo.",
+            "defects" : "Meu pensamento é inflexível.",
+            "ideals" : "Caridade. Eu sempre tento ajudar aqueles em necessidade, não importando o custo pessoal. (Bom)",
+            "personality" : "Eu idolatro um herói particular da minha fé, e constantemente me refiro a seus feitos e exemplos."
+          },
+          "attributes" : {
+            "charisma" : "14",
+            "constitution" : "20",
+            "dexterity" : "12",
+            "intelligency" : "10",
+            "knowledge" : "10",
+            "strength" : "20"
+          },
+          "name" : "Krivghar",
+          "race" : "Meio-Orc",
+          "tendency" : "Caótico e Bom"
+        } 
+      ]
     },
-    "fm3svBMxXpgiOtGizKQ3FquGzCD3" : {
-      "-LNMT57YQLJzkhu-dRhD" : {
-        "antecedent" : "Eremita",
-        "antecedentTraces" : {
-          "connections" : "Meu isolamento me deu grande discernimento sobre um grande mal que apenas eu posso destruir.",
-          "defects" : "Eu me arrisco muito para descobrir um pouco de conhecimento perdido.",
-          "ideals" : "Pensamento Livre. Questionamentos e curiosidade são os pilares do progresso. (Caótico)",
-          "personality" : "Eu sou absurdamente sereno, mesmo em face do desespero."
-        },
-        "armorClass" : 15,
-        "attributes" : {
-          "charisma" : 20,
-          "constitution" : 14,
-          "dexterity" : 14,
-          "intelligency" : 10,
-          "knowledge" : 16,
-          "strength" : 10
-        },
-        "class" : [ {
-          "level" : 4,
-          "name" : "Bruxo"
-        }, {
-          "level" : 4,
-          "name" : "Feiticeiro"
-        }, {
-          "level" : 2,
-          "name" : "Druida"
-        } ],
-        "hurt" : 0,
-        "lifePointsTemporary" : 0,
-        "lifePointsTotal" : 96,
-        "myMagics" : [ {
-          "castingTime" : "1 ação",
-          "classes" : [ "Feiticeiro", "Mago" ],
-          "components" : "V, S",
-          "description" : "Você arremessa uma bolha de ácido. Escolha uma criatura dentro do alcance, ou escolha duas criaturas dentro do alcance que estejam a 1,5 metro uma da outra. Um alvo deve ser bem sucedido num teste de resistência de Destreza ou sofrerá 1 d6 de dano ácido.</p><p> O dano dessa magia aumenta em 1 d6 quando você alcança o 5° nível (2 d6), 11° nível (3 d6) e 17° nível (4 d6).",
-          "duration" : "instantânea",
-          "level" : "0",
-          "name" : "Espirro Ácido",
-          "range" : "18 metros",
-          "school" : {
-            "pt" : "Conjuração",
-            "style" : "conjuration"
-          }
-        }, {
-          "castingTime" : "1 ação",
-          "classes" : [ "Feiticeiro", "Mago" ],
-          "components" : "V, S",
-          "description" : "Você arremessa um cisco de fogo em uma criatura ou objeto dentro do alcance. Faça um ataque à distância com magia contra o alvo. Se atingir, o alvo sofre 1 d10 de dano de fogo. Um objeto inflamável atingido por essa magia, incendeia se não estiver sendo vestido ou carregado.</p><p> O dano dessa magia aumenta em 1 d10 quando você alcança o 5° nível (2 d10), 11° nível (3 d10) e 17° nível (4 d10).",
-          "duration" : "instantânea",
-          "level" : "0",
-          "name" : "Raio de Fogo",
-          "range" : "36 metros",
-          "school" : {
-            "pt" : "Evocação",
-            "style" : "evocation"
-          }
-        }, {
-          "castingTime" : "1 ação",
-          "classes" : [ "Feiticeiro", "Mago" ],
-          "components" : "V, S",
-          "description" : "Um raio frigido de luz azul clara parte em direção de uma criatura, dentro do alcance. Realize um ataque à distância com magia contra o alvo. Se atingir, ele sofre 1 d8 de dano de frio e seu deslocamento é reduzido em 3 metros até o começo do seu próximo turno.</p><p> O dano da magia aumenta em 1 d8 quando você alcança o 5° nível (2 d8), 11° nível (3 d8) e 17° nível (4 d8).",
-          "duration" : "instantânea",
-          "level" : "0",
-          "name" : "Raio de Gelo",
-          "range" : "18 metros",
-          "school" : {
-            "pt" : "Evocação",
-            "style" : "evocation"
-          }
-        }, {
-          "castingTime" : "1 ação",
-          "classes" : [ "Bruxo", "Druida", "Feiticeiro", "Mago" ],
-          "components" : "V, S",
-          "description" : "Você ergue sua mão em direção de uma criatura que você possa ver, dentro do alcance e projeta um sopro de gás tóxico da sua palma. A criatura deve ser bem sucedida num teste de resistência de Constituição ou sofrerá 1 d12 de dano de veneno.</p><p> O dano dessa magia aumenta em 1 d12 quando você alcança o 5° nível (2 d12), 11° nível (3 d12) e 17° nível (4 d12).",
-          "duration" : "instantânea",
-          "level" : "0",
-          "name" : "Rajada de Veneno",
-          "range" : "3 metros",
-          "school" : {
-            "pt" : "Conjuração",
-            "style" : "conjuration"
-          }
-        }, {
-          "castingTime" : "1 ação",
-          "classes" : [ "Bruxo", "Feiticeiro", "Mago" ],
-          "components" : "V, S",
-          "description" : "Você cria uma mão esquelética fantasmagórica no espaço de uma criatura, dentro do alcance. Realize um ataque à distância com magia contra a criatura para afetá-la com o frio sepulcral. Se atingir, a criatura sofre 1 d8 de dano necrótico e não poderá recuperar pontos de vida até o início do seu próximo turno. Até lá, a mão ficará presa ao alvo.</p><p> Se você atingir um alvo morto - vivo, ele terá desvantagem nas jogadas de ataque contra você até o final do seu próximo turno.</p><p> O dano dessa magia aumenta em 1 d8 quando você alcança o 5° nível (2 d8), 11° nível (3 d8) e 17° nível (4 d8).",
-          "duration" : "1 rodada",
-          "level" : "0",
-          "name" : "Toque Arrepiante",
-          "range" : "36 metros",
-          "school" : {
-            "pt" : "Necromancia",
-            "style" : "necromancy"
-          }
-        }, {
-          "castingTime" : "1 ação",
-          "classes" : [ "Bruxo" ],
-          "components" : "V, S",
-          "description" : "Um feixe de energia crepitante vai em direção a uma criatura dentro do alcance. Realize uma jogada de ataque à distância com magia contra o alvo. Se atingir, o alvo sofre 1 d10 de dano de energia.</p><p> A magia cria mais de um feixe quando você alcança níveis elevados: dois feixes no 5° nível, três feixes no 11° nível e quatro feixes no 17° nível. Você pode direcionar os feixes para o mesmo alvo ou para alvos diferentes. Realize jogadas de ataque separadas para cada feixe.",
-          "duration" : "instantânea",
-          "level" : "0",
-          "name" : "Rajada Mística",
-          "range" : "36 metros",
-          "school" : {
-            "pt" : "Evocação",
-            "style" : "evocation"
-          }
-        }, {
-          "castingTime" : "1 ação bônus",
-          "classes" : [ "Druida" ],
-          "components" : "V, S, M",
-          "description" : "A madeira de uma clava ou bordão, que você esteja segurando, é imbuída com o poder da natureza. Pela duração, você pode usar sua habilidade de conjuração ao invés da sua Força para as jogadas de ataque e dano corpo - a - corpo usando essa arma, e o dado de dano da arma se torna um d8. A arma também se torna mágica, se ela já não for. A magia acaba se você conjurá-la novamente ou se você soltar a arma.",
-          "duration" : "1 minuto",
-          "level" : "0",
-          "material" : "visco, uma folha de trevo e uma clava ou bordão",
-          "name" : "Bordão Místico",
-          "range" : "toque",
-          "school" : {
-            "pt" : "Transmutação",
-            "style" : "transmutation"
-          }
-        }, {
-          "castingTime" : "1 ação bônus",
-          "classes" : [ "Bruxo" ],
-          "components" : "V, S, M",
-          "concentration" : "s",
-          "description" : "Você coloca uma maldição em uma criatura que você possa ver, dentro do alcance. Até a magia acabar, você causa 1 d6 de dano necrótico extra no alvo sempre que atingi - lo com um ataque. Além disso, escolha uma habilidade quando você conjurar a magia. O alvo tem desvantagem em testes de habilidade feitos com a habilidade escolhida.</p><p> Se o alvo cair a 0 pontos de vida antes da magia acabar, você pode usar uma ação bônus, em um turno subsequente, para amaldiçoar outra criatura.</p><p> Uma magia <em> remover maldição </em> conjurada no alvo acaba com a magia prematuramente.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 3° ou 4° nível, você poderá manter sua concentração na magia por até 8 horas. Quando você usar um espaço de magia de 5° nível ou superior, você poderá manter sua concentração na magia por até 24 horas.",
-          "duration" : "até 1 hora",
-          "level" : "1",
-          "material" : "o olho petrificado de um tritão",
-          "name" : "Bruxaria",
-          "range" : "18 metros",
-          "school" : {
-            "pt" : "Encantamento",
-            "style" : "enchantment"
-          }
-        }, {
-          "castingTime" : "1 ação",
-          "classes" : [ "Bruxo" ],
-          "components" : "V, S",
-          "description" : "Você invoca o poder de Hadar, o Faminto Sombrio. Tentáculos de energia negra brotam de você e golpeiam todas as criaturas a até 3 metros de você. Cada criatura na área deve realizar um teste de resistência de Força. Se falhar, o alvo sofre 2 d6 de dano necrótico e não pode fazer reações até o próximo turno dela. Em um sucesso, uma criatura sofre metade do dano e não sofre qualquer outro efeito.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 2° nível ou superior, o dano aumenta em 1 d6 para cada nível do espaço acima do 1°.",
-          "duration" : "instantânea",
-          "level" : "1",
-          "name" : "Braços de Hadar",
-          "range" : "pessoal",
-          "school" : {
-            "pt" : "Conjuração",
-            "style" : "conjuration"
-          }
-        }, {
-          "castingTime" : "1 reação",
-          "classes" : [ "Bruxo" ],
-          "components" : "V, S",
-          "description" : "Você aponta seu dedo e a criatura que causou dano a você é, momentaneamente, envolta por chamas infernais. A criatura deve realizar um teste de resistência de Destreza. Ela sofre 2 d10 de dano de fogo se falhar na resistência ou metade desse dano se obtiver sucesso.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 2° nível ou superior, o dano aumenta em 1 d10 para cada nível do espaço acima do 1°.",
-          "duration" : "instantânea",
-          "level" : "1",
-          "name" : "Repreensão Infernal",
-          "range" : "18 metros",
-          "reaction" : "que você faz em resposta ao sofre dano de uma criatura a até 18 metros de você e que você possa ver",
-          "school" : {
-            "pt" : "Evocação",
-            "style" : "evocation"
-          }
-        }, {
-          "castingTime" : "1 ação",
-          "classes" : [ "Bardo", "Druida", "Feiticeiro", "Mago" ],
-          "components" : "V, S",
-          "description" : "Uma onda de força trovejante varre tudo a partir de você. Cada criatura num cubo de 4, 5 metros originado em você, deve realizar um teste de resistência de Constituição. Se falhar na resistência, uma criatura sofrerá 2 d8 de dano trovejante e será empurrada 3 metros para longe de você. Se obtive sucesso na resistência, a criatura sofrerá metade desse dano e não será empurrada.</p><p> Além disso, objetos soltos que estiverem completamente dentro da área de efeito serão automaticamente empurrados 3 metros para longe de você pelo efeito da magia e a magia emitirá um ressonante barulho de trovão audível a até 90 metros.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 2° nível ou superior, o dano aumenta em 1 d8 para cada nível acima do 1°.",
-          "duration" : "instantânea",
-          "level" : "1",
-          "name" : "Onda Trovejante",
-          "range" : "pessoal",
-          "school" : {
-            "pt" : "Evocação",
-            "style" : "evocation"
-          }
-        }, {
-          "castingTime" : "1 ação",
-          "classes" : [ "Feiticeiro", "Mago" ],
-          "components" : "V, S, M",
-          "description" : "Você arremessa uma esfera de energia de 12 centímetros de diâmetro numa criatura que você possa ver dentro do alcance. Você escolhe ácido, frio, fogo, elétrico, veneno ou trovejante para o tipo de orbe que você cria e, então, realiza um ataque à distância com magia. Se o ataque atingir, a criatura sofre 3 d8 de dano do tipo escolhido.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 2° nível ou superior, o dano aumenta em 1 d8 para cada nível do espaço acima do 1°.",
-          "duration" : "instantânea",
-          "level" : "1",
-          "material" : "um diamante valendo, no mínimo, 50 po",
-          "name" : "Orbe Cromática",
-          "range" : "27 metros",
-          "school" : {
-            "pt" : "Evocação",
-            "style" : "evocation"
-          }
-        }, {
-          "castingTime" : "1 reação",
-          "classes" : [ "Bardo", "Feiticeiro", "Mago" ],
-          "components" : "V, M",
-          "description" : "Escolha até cinco criaturas caindo, dentro do alcance. A taxa de descendência de uma criatura caindo é reduzida para 18 metros por rodada, até o fim da magia. Se a criatura aterrissar antes da magia acabar, ela não sofre nenhum dano de queda, pode aterrissar em pé e a magia termina para essa criatura.",
-          "duration" : "1 minuto",
-          "level" : "1",
-          "material" : "uma pequena pena ou penugem similar",
-          "name" : "Queda Suave",
-          "range" : "18 metros",
-          "reaction" : "que você realiza quando você ou uma criatura a até 18 metros cair",
-          "school" : {
-            "pt" : "Transmutação",
-            "style" : "transmutation"
-          }
-        }, {
-          "castingTime" : "1 ação",
-          "classes" : [ "Feiticeiro", "Mago" ],
-          "components" : "V, S",
-          "description" : "Um raio adoecente de energia esverdeada chicoteia na direção de uma criatura dentro do alcance. Faça um ataque à distância com magia contra o alvo. Se atingir, o alvo sofrerá 2 d8 de dano de veneno e deve realizar um teste de resistência de Constituição. Se falhar na resistência, ele também ficará envenenado até o final do seu próximo turno.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 2° nível ou superior, o dano da magia aumenta em 1 d8 para cada nível do espaço acima do 1°.",
-          "duration" : "instantânea",
-          "level" : "1",
-          "name" : "Raio Adoecente",
-          "range" : "18 metros",
-          "school" : {
-            "pt" : "Necromancia",
-            "style" : "necromancy"
-          }
-        }, {
-          "castingTime" : "1 ação",
-          "classes" : [ "Bardo", "Clérigo", "Druida", "Paladino", "Patrulheiro" ],
-          "components" : "V, S",
-          "description" : "Uma criatura que você tocar recupera uma quantidade de pontos de vida igual a 1 d8 + seu modificador de habilidade de conjuração. Essa magia não produz efeito em mortos - vivos ou constructos.</p><p><strong> Em Níveis Superiores </strong>. Se você conjurar essa magia usando um espaço de magia de 2° nível ou superior, a cura aumenta em 1 d8 para cada nível do espaço acima do 1°.",
-          "duration" : "instantânea",
-          "level" : "1",
-          "name" : "Curar Ferimentos",
-          "range" : "toque",
-          "school" : {
-            "pt" : "Evocação",
-            "style" : "evocation"
-          }
-        }, {
-          "castingTime" : "1 ação bônus",
-          "classes" : [ "Bardo", "Clérigo", "Druida" ],
-          "components" : "V",
-          "description" : "Uma criatura, à sua escolha, que você possa ver dentro do alcance recupera uma quantidade de pontos de vida igual a 1 d4 + seu modificador de habilidade de conjuração. Essa magia não tem efeito em mortos - vivos ou constructos </p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 2° nível ou superior, a cura aumenta em 1 d4 para cada nível do espaço acima do 1°.",
-          "duration" : "instantânea",
-          "level" : "1",
-          "name" : "Palavra Curativa",
-          "range" : "18 metros",
-          "school" : {
-            "pt" : "Evocação",
-            "style" : "evocation"
-          }
-        }, {
-          "castingTime" : "1 ação",
-          "classes" : [ "Bardo", "Druida", "Mago", "Patrulheiro" ],
-          "components" : "V, S, M",
-          "description" : "Você toca uma criatura. O deslocamento do alvo aumenta em 3 metros, até a magia acabar.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 2° nível ou superior, você pode afetar uma criatura adicional para cada nível do espaço acima do 1°.",
-          "duration" : "1 hora",
-          "level" : "1",
-          "material" : "um pouco de barro",
-          "name" : "Passos Longos",
-          "range" : "toque",
-          "school" : {
-            "pt" : "Transmutação",
-            "style" : "transmutation"
-          }
-        }, {
-          "castingTime" : "1 hora",
-          "classes" : [ "Bardo", "Clérigo", "Druida", "Mago" ],
-          "components" : "V, S, M",
-          "description" : "Com essa magia, você tenta obrigar um celestial, corruptor, elemental ou fada a servi - lo. A criatura deve estar dentro do alcance durante toda a conjuração da magia. (Tipicamente, a criatura, primeiramente, é invocada dentro de um círculo mágico invertido para mantê - la presa enquanto a magia é conjurada.) Ao completar a conjuração, o alvo deve realizar um teste de resistência de Carisma. Se falhar na resistência, ela é obrigada a servir você pela duração. Se a criatura foi invocada ou criada por outra magia, a duração da magia é estendida para se equiparar a dessa magia.</p><p> Uma criatura obrigada deve seguir suas instruções da melhor forma que puder. Você poderia comandar a criatura a acompanhar você em uma aventura, a guardar um local ou a enviar uma mensagem. A criatura obedece ao pé da letra suas instruções, mas se a criatura for hostil a você, ela se esforçará para distorcer suas palavras para atingir seus próprios objetivos. Se a criatura atender suas instruções completamente antes da magia acabar, ela viajará até você para relatar esse fato se você estiver no mesmo plano de existência. Se você estiver em um plano de existência diferente, ela retornará para o lugar onde você a contatou e permanecerá lá até a magia acabar.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de nível superior, a duração aumenta para 10 dias com um espaço de 6° nível, para 30 dias com um espaço de 7° nível, para 180 dias com um espaço de 8° nível e para um ano com um espaço de magia de 9° nível.",
-          "duration" : "24 horas",
-          "level" : "5",
-          "material" : "uma joia valendo, no mínimo, 1. 000 po, consumida pela magia",
-          "name" : "Âncora Planar",
-          "range" : "18 metros",
-          "school" : {
-            "pt" : "Abjuração",
-            "style" : "abjuration"
-          }
-        } ],
-        "name" : "Ezram Sorlocked",
-        "proficiencyBonus" : "+4",
-        "race" : "Meio-Elfo",
-        "tendency" : "Caótico e Bom"
-      }
+    {
+      "id": "fm3svBMxXpgiOtGizKQ3FquGzCD3",
+      "my_persons": [
+        {
+        "id" : "-LNMT57YQLJzkhu-dRhD",
+          "antecedent" : "Eremita",
+          "antecedentTraces" : {
+            "connections" : "Meu isolamento me deu grande discernimento sobre um grande mal que apenas eu posso destruir.",
+            "defects" : "Eu me arrisco muito para descobrir um pouco de conhecimento perdido.",
+            "ideals" : "Pensamento Livre. Questionamentos e curiosidade são os pilares do progresso. (Caótico)",
+            "personality" : "Eu sou absurdamente sereno, mesmo em face do desespero."
+          },
+          "armorClass" : 15,
+          "attributes" : {
+            "charisma" : 20,
+            "constitution" : 14,
+            "dexterity" : 14,
+            "intelligency" : 10,
+            "knowledge" : 16,
+            "strength" : 10
+          },
+          "class" : [ {
+            "level" : 4,
+            "name" : "Bruxo"
+          }, {
+            "level" : 4,
+            "name" : "Feiticeiro"
+          }, {
+            "level" : 2,
+            "name" : "Druida"
+          } ],
+          "hurt" : 0,
+          "lifePointsTemporary" : 0,
+          "lifePointsTotal" : 96,
+          "myMagics" : [ {
+            "castingTime" : "1 ação",
+            "classes" : [ "Feiticeiro", "Mago" ],
+            "components" : "V, S",
+            "description" : "Você arremessa uma bolha de ácido. Escolha uma criatura dentro do alcance, ou escolha duas criaturas dentro do alcance que estejam a 1,5 metro uma da outra. Um alvo deve ser bem sucedido num teste de resistência de Destreza ou sofrerá 1 d6 de dano ácido.</p><p> O dano dessa magia aumenta em 1 d6 quando você alcança o 5° nível (2 d6), 11° nível (3 d6) e 17° nível (4 d6).",
+            "duration" : "instantânea",
+            "level" : "0",
+            "name" : "Espirro Ácido",
+            "range" : "18 metros",
+            "school" : {
+              "pt" : "Conjuração",
+              "style" : "conjuration"
+            }
+          }, {
+            "castingTime" : "1 ação",
+            "classes" : [ "Feiticeiro", "Mago" ],
+            "components" : "V, S",
+            "description" : "Você arremessa um cisco de fogo em uma criatura ou objeto dentro do alcance. Faça um ataque à distância com magia contra o alvo. Se atingir, o alvo sofre 1 d10 de dano de fogo. Um objeto inflamável atingido por essa magia, incendeia se não estiver sendo vestido ou carregado.</p><p> O dano dessa magia aumenta em 1 d10 quando você alcança o 5° nível (2 d10), 11° nível (3 d10) e 17° nível (4 d10).",
+            "duration" : "instantânea",
+            "level" : "0",
+            "name" : "Raio de Fogo",
+            "range" : "36 metros",
+            "school" : {
+              "pt" : "Evocação",
+              "style" : "evocation"
+            }
+          }, {
+            "castingTime" : "1 ação",
+            "classes" : [ "Feiticeiro", "Mago" ],
+            "components" : "V, S",
+            "description" : "Um raio frigido de luz azul clara parte em direção de uma criatura, dentro do alcance. Realize um ataque à distância com magia contra o alvo. Se atingir, ele sofre 1 d8 de dano de frio e seu deslocamento é reduzido em 3 metros até o começo do seu próximo turno.</p><p> O dano da magia aumenta em 1 d8 quando você alcança o 5° nível (2 d8), 11° nível (3 d8) e 17° nível (4 d8).",
+            "duration" : "instantânea",
+            "level" : "0",
+            "name" : "Raio de Gelo",
+            "range" : "18 metros",
+            "school" : {
+              "pt" : "Evocação",
+              "style" : "evocation"
+            }
+          }, {
+            "castingTime" : "1 ação",
+            "classes" : [ "Bruxo", "Druida", "Feiticeiro", "Mago" ],
+            "components" : "V, S",
+            "description" : "Você ergue sua mão em direção de uma criatura que você possa ver, dentro do alcance e projeta um sopro de gás tóxico da sua palma. A criatura deve ser bem sucedida num teste de resistência de Constituição ou sofrerá 1 d12 de dano de veneno.</p><p> O dano dessa magia aumenta em 1 d12 quando você alcança o 5° nível (2 d12), 11° nível (3 d12) e 17° nível (4 d12).",
+            "duration" : "instantânea",
+            "level" : "0",
+            "name" : "Rajada de Veneno",
+            "range" : "3 metros",
+            "school" : {
+              "pt" : "Conjuração",
+              "style" : "conjuration"
+            }
+          }, {
+            "castingTime" : "1 ação",
+            "classes" : [ "Bruxo", "Feiticeiro", "Mago" ],
+            "components" : "V, S",
+            "description" : "Você cria uma mão esquelética fantasmagórica no espaço de uma criatura, dentro do alcance. Realize um ataque à distância com magia contra a criatura para afetá-la com o frio sepulcral. Se atingir, a criatura sofre 1 d8 de dano necrótico e não poderá recuperar pontos de vida até o início do seu próximo turno. Até lá, a mão ficará presa ao alvo.</p><p> Se você atingir um alvo morto - vivo, ele terá desvantagem nas jogadas de ataque contra você até o final do seu próximo turno.</p><p> O dano dessa magia aumenta em 1 d8 quando você alcança o 5° nível (2 d8), 11° nível (3 d8) e 17° nível (4 d8).",
+            "duration" : "1 rodada",
+            "level" : "0",
+            "name" : "Toque Arrepiante",
+            "range" : "36 metros",
+            "school" : {
+              "pt" : "Necromancia",
+              "style" : "necromancy"
+            }
+          }, {
+            "castingTime" : "1 ação",
+            "classes" : [ "Bruxo" ],
+            "components" : "V, S",
+            "description" : "Um feixe de energia crepitante vai em direção a uma criatura dentro do alcance. Realize uma jogada de ataque à distância com magia contra o alvo. Se atingir, o alvo sofre 1 d10 de dano de energia.</p><p> A magia cria mais de um feixe quando você alcança níveis elevados: dois feixes no 5° nível, três feixes no 11° nível e quatro feixes no 17° nível. Você pode direcionar os feixes para o mesmo alvo ou para alvos diferentes. Realize jogadas de ataque separadas para cada feixe.",
+            "duration" : "instantânea",
+            "level" : "0",
+            "name" : "Rajada Mística",
+            "range" : "36 metros",
+            "school" : {
+              "pt" : "Evocação",
+              "style" : "evocation"
+            }
+          }, {
+            "castingTime" : "1 ação bônus",
+            "classes" : [ "Druida" ],
+            "components" : "V, S, M",
+            "description" : "A madeira de uma clava ou bordão, que você esteja segurando, é imbuída com o poder da natureza. Pela duração, você pode usar sua habilidade de conjuração ao invés da sua Força para as jogadas de ataque e dano corpo - a - corpo usando essa arma, e o dado de dano da arma se torna um d8. A arma também se torna mágica, se ela já não for. A magia acaba se você conjurá-la novamente ou se você soltar a arma.",
+            "duration" : "1 minuto",
+            "level" : "0",
+            "material" : "visco, uma folha de trevo e uma clava ou bordão",
+            "name" : "Bordão Místico",
+            "range" : "toque",
+            "school" : {
+              "pt" : "Transmutação",
+              "style" : "transmutation"
+            }
+          }, {
+            "castingTime" : "1 ação bônus",
+            "classes" : [ "Bruxo" ],
+            "components" : "V, S, M",
+            "concentration" : "s",
+            "description" : "Você coloca uma maldição em uma criatura que você possa ver, dentro do alcance. Até a magia acabar, você causa 1 d6 de dano necrótico extra no alvo sempre que atingi - lo com um ataque. Além disso, escolha uma habilidade quando você conjurar a magia. O alvo tem desvantagem em testes de habilidade feitos com a habilidade escolhida.</p><p> Se o alvo cair a 0 pontos de vida antes da magia acabar, você pode usar uma ação bônus, em um turno subsequente, para amaldiçoar outra criatura.</p><p> Uma magia <em> remover maldição </em> conjurada no alvo acaba com a magia prematuramente.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 3° ou 4° nível, você poderá manter sua concentração na magia por até 8 horas. Quando você usar um espaço de magia de 5° nível ou superior, você poderá manter sua concentração na magia por até 24 horas.",
+            "duration" : "até 1 hora",
+            "level" : "1",
+            "material" : "o olho petrificado de um tritão",
+            "name" : "Bruxaria",
+            "range" : "18 metros",
+            "school" : {
+              "pt" : "Encantamento",
+              "style" : "enchantment"
+            }
+          }, {
+            "castingTime" : "1 ação",
+            "classes" : [ "Bruxo" ],
+            "components" : "V, S",
+            "description" : "Você invoca o poder de Hadar, o Faminto Sombrio. Tentáculos de energia negra brotam de você e golpeiam todas as criaturas a até 3 metros de você. Cada criatura na área deve realizar um teste de resistência de Força. Se falhar, o alvo sofre 2 d6 de dano necrótico e não pode fazer reações até o próximo turno dela. Em um sucesso, uma criatura sofre metade do dano e não sofre qualquer outro efeito.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 2° nível ou superior, o dano aumenta em 1 d6 para cada nível do espaço acima do 1°.",
+            "duration" : "instantânea",
+            "level" : "1",
+            "name" : "Braços de Hadar",
+            "range" : "pessoal",
+            "school" : {
+              "pt" : "Conjuração",
+              "style" : "conjuration"
+            }
+          }, {
+            "castingTime" : "1 reação",
+            "classes" : [ "Bruxo" ],
+            "components" : "V, S",
+            "description" : "Você aponta seu dedo e a criatura que causou dano a você é, momentaneamente, envolta por chamas infernais. A criatura deve realizar um teste de resistência de Destreza. Ela sofre 2 d10 de dano de fogo se falhar na resistência ou metade desse dano se obtiver sucesso.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 2° nível ou superior, o dano aumenta em 1 d10 para cada nível do espaço acima do 1°.",
+            "duration" : "instantânea",
+            "level" : "1",
+            "name" : "Repreensão Infernal",
+            "range" : "18 metros",
+            "reaction" : "que você faz em resposta ao sofre dano de uma criatura a até 18 metros de você e que você possa ver",
+            "school" : {
+              "pt" : "Evocação",
+              "style" : "evocation"
+            }
+          }, {
+            "castingTime" : "1 ação",
+            "classes" : [ "Bardo", "Druida", "Feiticeiro", "Mago" ],
+            "components" : "V, S",
+            "description" : "Uma onda de força trovejante varre tudo a partir de você. Cada criatura num cubo de 4, 5 metros originado em você, deve realizar um teste de resistência de Constituição. Se falhar na resistência, uma criatura sofrerá 2 d8 de dano trovejante e será empurrada 3 metros para longe de você. Se obtive sucesso na resistência, a criatura sofrerá metade desse dano e não será empurrada.</p><p> Além disso, objetos soltos que estiverem completamente dentro da área de efeito serão automaticamente empurrados 3 metros para longe de você pelo efeito da magia e a magia emitirá um ressonante barulho de trovão audível a até 90 metros.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 2° nível ou superior, o dano aumenta em 1 d8 para cada nível acima do 1°.",
+            "duration" : "instantânea",
+            "level" : "1",
+            "name" : "Onda Trovejante",
+            "range" : "pessoal",
+            "school" : {
+              "pt" : "Evocação",
+              "style" : "evocation"
+            }
+          }, {
+            "castingTime" : "1 ação",
+            "classes" : [ "Feiticeiro", "Mago" ],
+            "components" : "V, S, M",
+            "description" : "Você arremessa uma esfera de energia de 12 centímetros de diâmetro numa criatura que você possa ver dentro do alcance. Você escolhe ácido, frio, fogo, elétrico, veneno ou trovejante para o tipo de orbe que você cria e, então, realiza um ataque à distância com magia. Se o ataque atingir, a criatura sofre 3 d8 de dano do tipo escolhido.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 2° nível ou superior, o dano aumenta em 1 d8 para cada nível do espaço acima do 1°.",
+            "duration" : "instantânea",
+            "level" : "1",
+            "material" : "um diamante valendo, no mínimo, 50 po",
+            "name" : "Orbe Cromática",
+            "range" : "27 metros",
+            "school" : {
+              "pt" : "Evocação",
+              "style" : "evocation"
+            }
+          }, {
+            "castingTime" : "1 reação",
+            "classes" : [ "Bardo", "Feiticeiro", "Mago" ],
+            "components" : "V, M",
+            "description" : "Escolha até cinco criaturas caindo, dentro do alcance. A taxa de descendência de uma criatura caindo é reduzida para 18 metros por rodada, até o fim da magia. Se a criatura aterrissar antes da magia acabar, ela não sofre nenhum dano de queda, pode aterrissar em pé e a magia termina para essa criatura.",
+            "duration" : "1 minuto",
+            "level" : "1",
+            "material" : "uma pequena pena ou penugem similar",
+            "name" : "Queda Suave",
+            "range" : "18 metros",
+            "reaction" : "que você realiza quando você ou uma criatura a até 18 metros cair",
+            "school" : {
+              "pt" : "Transmutação",
+              "style" : "transmutation"
+            }
+          }, {
+            "castingTime" : "1 ação",
+            "classes" : [ "Feiticeiro", "Mago" ],
+            "components" : "V, S",
+            "description" : "Um raio adoecente de energia esverdeada chicoteia na direção de uma criatura dentro do alcance. Faça um ataque à distância com magia contra o alvo. Se atingir, o alvo sofrerá 2 d8 de dano de veneno e deve realizar um teste de resistência de Constituição. Se falhar na resistência, ele também ficará envenenado até o final do seu próximo turno.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 2° nível ou superior, o dano da magia aumenta em 1 d8 para cada nível do espaço acima do 1°.",
+            "duration" : "instantânea",
+            "level" : "1",
+            "name" : "Raio Adoecente",
+            "range" : "18 metros",
+            "school" : {
+              "pt" : "Necromancia",
+              "style" : "necromancy"
+            }
+          }, {
+            "castingTime" : "1 ação",
+            "classes" : [ "Bardo", "Clérigo", "Druida", "Paladino", "Patrulheiro" ],
+            "components" : "V, S",
+            "description" : "Uma criatura que você tocar recupera uma quantidade de pontos de vida igual a 1 d8 + seu modificador de habilidade de conjuração. Essa magia não produz efeito em mortos - vivos ou constructos.</p><p><strong> Em Níveis Superiores </strong>. Se você conjurar essa magia usando um espaço de magia de 2° nível ou superior, a cura aumenta em 1 d8 para cada nível do espaço acima do 1°.",
+            "duration" : "instantânea",
+            "level" : "1",
+            "name" : "Curar Ferimentos",
+            "range" : "toque",
+            "school" : {
+              "pt" : "Evocação",
+              "style" : "evocation"
+            }
+          }, {
+            "castingTime" : "1 ação bônus",
+            "classes" : [ "Bardo", "Clérigo", "Druida" ],
+            "components" : "V",
+            "description" : "Uma criatura, à sua escolha, que você possa ver dentro do alcance recupera uma quantidade de pontos de vida igual a 1 d4 + seu modificador de habilidade de conjuração. Essa magia não tem efeito em mortos - vivos ou constructos </p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 2° nível ou superior, a cura aumenta em 1 d4 para cada nível do espaço acima do 1°.",
+            "duration" : "instantânea",
+            "level" : "1",
+            "name" : "Palavra Curativa",
+            "range" : "18 metros",
+            "school" : {
+              "pt" : "Evocação",
+              "style" : "evocation"
+            }
+          }, {
+            "castingTime" : "1 ação",
+            "classes" : [ "Bardo", "Druida", "Mago", "Patrulheiro" ],
+            "components" : "V, S, M",
+            "description" : "Você toca uma criatura. O deslocamento do alvo aumenta em 3 metros, até a magia acabar.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 2° nível ou superior, você pode afetar uma criatura adicional para cada nível do espaço acima do 1°.",
+            "duration" : "1 hora",
+            "level" : "1",
+            "material" : "um pouco de barro",
+            "name" : "Passos Longos",
+            "range" : "toque",
+            "school" : {
+              "pt" : "Transmutação",
+              "style" : "transmutation"
+            }
+          }, {
+            "castingTime" : "1 hora",
+            "classes" : [ "Bardo", "Clérigo", "Druida", "Mago" ],
+            "components" : "V, S, M",
+            "description" : "Com essa magia, você tenta obrigar um celestial, corruptor, elemental ou fada a servi - lo. A criatura deve estar dentro do alcance durante toda a conjuração da magia. (Tipicamente, a criatura, primeiramente, é invocada dentro de um círculo mágico invertido para mantê - la presa enquanto a magia é conjurada.) Ao completar a conjuração, o alvo deve realizar um teste de resistência de Carisma. Se falhar na resistência, ela é obrigada a servir você pela duração. Se a criatura foi invocada ou criada por outra magia, a duração da magia é estendida para se equiparar a dessa magia.</p><p> Uma criatura obrigada deve seguir suas instruções da melhor forma que puder. Você poderia comandar a criatura a acompanhar você em uma aventura, a guardar um local ou a enviar uma mensagem. A criatura obedece ao pé da letra suas instruções, mas se a criatura for hostil a você, ela se esforçará para distorcer suas palavras para atingir seus próprios objetivos. Se a criatura atender suas instruções completamente antes da magia acabar, ela viajará até você para relatar esse fato se você estiver no mesmo plano de existência. Se você estiver em um plano de existência diferente, ela retornará para o lugar onde você a contatou e permanecerá lá até a magia acabar.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de nível superior, a duração aumenta para 10 dias com um espaço de 6° nível, para 30 dias com um espaço de 7° nível, para 180 dias com um espaço de 8° nível e para um ano com um espaço de magia de 9° nível.",
+            "duration" : "24 horas",
+            "level" : "5",
+            "material" : "uma joia valendo, no mínimo, 1. 000 po, consumida pela magia",
+            "name" : "Âncora Planar",
+            "range" : "18 metros",
+            "school" : {
+              "pt" : "Abjuração",
+              "style" : "abjuration"
+            }
+          } ],
+          "name" : "Ezram Sorlocked",
+          "proficiencyBonus" : "+4",
+          "race" : "Meio-Elfo",
+          "tendency" : "Caótico e Bom"
+        }
+      ]
+      
     }
-  }
+  ]
 }
