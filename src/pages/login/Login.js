@@ -16,33 +16,37 @@ import {
   ContainerApp,
 } from './styles';
 
-
-
 import CardForm from '../../components/cards/CardForm';
 import CardFormFooter from '../../components/cards/CardFormFooter';
 import FormRow from '../../components/forms/FormRow';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import axios from 'axios';
 
 const BOOK_BACKGROUND = require('../../../resources/img/book.jpg');
 const LOGO = require('../../../resources/img/5ered.png');
 
 // create a component
 function Login() {
-  const [mail, setMail] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState('');
+  const [user, setUser] = useState(null);
 
   function componentDidMount() {
     this._retrieveData();
   }
 
-  function onChangeHandler(field, value) {
-    this.setState({
+  /* function onChangeHandler(field, value) {
+    setMail({
       [field]: value,
     });
-  }
+    setPassword({
+      [field]: value,
+    });
+    console.log(mail, password);
+  } */
 
   const _storeData = async user => {
     try {
@@ -77,20 +81,35 @@ function Login() {
     }
   };
 
-  function logar(email = '', password = '') {
-    this.setState({isLoading: true, message: ''});
-    if (email === '' && password === '') {
-      email = this.state.mail;
-      password = this.state.password;
+  async function logar() {
+    setIsLoading(true);
+    if (!email || !password) {
+      setMessage('Por favor prencha os campos de email e senha');
+      setIsLoading(false);
     }
 
-    this.props
+    await axios
+      .get('http://192.168.0.14:3000/users')
+      .then(response => {
+        response.data.map(user => {
+          if (user.email === email && user.password === password) {
+            setUser(user);
+            return navigator.navigate('Dashboard', user);
+          }
+        });
+      })
+      .catch(error => {
+        console.log(error);
+      });
+    console.log(user);
+    setIsLoading(false);
+    /*props
       .tryLogin({email, password})
-      .then(user => {
-        if (user) {
-          user.password = password;
-          _storeData(user);
-          return this.props.navigation.navigate('Dashboard');
+      .then(users => {
+        if (users) {
+          users.password = password;
+          _storeData(users);
+          return props.navigation.navigate('Dashboard');
         }
 
         this.setState({
@@ -103,7 +122,7 @@ function Login() {
           isLoading: false,
           message: this.getMessageByErrorCode(error),
         });
-      });
+      });*/
   }
 
   function getMessageByErrorCode(errorCode) {
@@ -128,15 +147,13 @@ function Login() {
       return <LoadingButton color="#FFF" />;
     }
     return (
-      <ButtonLogin onPress={() => this.logar()} underlayColor="#a37c00">
+      <ButtonLogin onPress={() => logar()} underlayColor="#a37c00">
         <ButtonLoginText>Entrar</ButtonLoginText>
       </ButtonLogin>
     );
   }
 
   function renderMessage() {
-    
-
     if (!message) {
       return null;
     }
@@ -155,8 +172,8 @@ function Login() {
           <FormRow first>
             <InputLogin
               placeholder="user@mail.com"
-              value={mail}
-              onChangeText={value => this.onChangeHandler('mail', value)}
+              value={email}
+              onChangeText={email => setEmail(email)}
             />
           </FormRow>
           <FormRow last>
@@ -164,7 +181,7 @@ function Login() {
               placeholder="********"
               value={password}
               secureTextEntry
-              onChangeText={value => this.onChangeHandler('password', value)}
+              onChangeText={password => setPassword(password)}
             />
           </FormRow>
           {renderMessage()}
