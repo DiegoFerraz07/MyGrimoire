@@ -1,149 +1,154 @@
 //import liraries
-import React from 'react';
+import React, {Component, useEffect, useState} from 'react';
 
 import CardForm from '../../components/cards/CardForm';
 import FormRow from '../../components/forms/FormRow';
 
-import { connect } from 'react-redux';
+import axios from 'axios';
 
-import { 
-    ImageHeader, 
-    ImageBackground, 
-    CardLogin, 
-    InputLogin, 
-    ContainerLogin, 
-    ContainerError, 
-    LoadingButton, 
-    ButtonLogin, 
-    ButtonLoginText, 
-    ErrorText,
-    ContainerApp
+import uuid from 'react-native-uuid';
+
+import {
+  ImageHeader,
+  ImageBackground,
+  CardLogin,
+  InputLogin,
+  ContainerLogin,
+  ContainerError,
+  LoadingButton,
+  ButtonLogin,
+  ButtonLoginText,
+  ErrorText,
+  ContainerApp,
 } from './styles';
 
 const bookBackground = require('../../../resources/img/book.jpg');
 
 // create a component
-class Login extends React.Component {
-    static navigationOptions = {
-        headerRight: ( <ImageHeader source = {require('../../../resources/img/5ered.png')} /> ),
-    }
-    constructor(props) {
-        super(props);
+function Register() {
+  const [user, setUser] = useState(null);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState('');
 
-        this.state = {
-            nome: '',
-            mail: '',
-            password: '',
-            isLoading: false,
-            message: ''
-        }
+  async function tryRegister() {
+    setIsLoading(true);
+    setMessage('');
 
-    }
+    if (!email || !password) {
+      setMessage('Preencha todos os campos');
+      setIsLoading(false);
+    } else {
+      //salvar o usuário no banco de dados
+      const data = {
+        id: uuid.v4(),
+        name,
+        email,
+        password,
+      };
 
-    onChangeHandler(field, value) {
-        this.setState({
-            [field]: value
+      await axios
+        .post('http://10.0.2.2:3000/users', data)
+        .then(response => {
+          console.log(response);
+        })
+        .catch(error => {
+          console.log(error);
         });
-    }
-    tryRegister() {
-        this.setState({isLoading: true, message: ''});
-        const { mail: email, password } = this.state;
 
-        if(!email || !password) {
-            this.setState({
-                message: 'Digite os dados',
-                isLoading: false
-            });
-        } else {
-            
-            this.props.tryRegister({email, password})
-            .then((user) => {
-                if (user)
-                  return this.props.navigation.replace('home');  
+      setIsLoading(false);
+      // criar objeto e salvar via post pelo json-server do arquivo db
+
+      /*{
+        "id": "ApZqh2lRENc43CpU3O9S8qthq4R2",
+        "nome": "Diego",
+        "email": "dihferraz-01@hotmail.com",
+        "senha": "123456"
+      },*/
+
+      /*this.props
+              .tryRegister({email, password})
+              .then(user => {
+                if (user) {
+                  return this.props.navigation.replace('home');
+                }
 
                 this.setState({
-                    isLoading: false,
-                    message: ''
+                  isLoading: false,
+                  message: '',
                 });
-            })
-            .catch( error =>{
+              })
+              .catch(error => {
                 this.setState({
-                    isLoading: false, 
-                    message: this.getMessageByErrorCode(error)
+                  isLoading: false,
+                  message: this.getMessageByErrorCode(error),
                 });
-            });
-        }
+              });*/
+    }
+  }
+
+  const renderButton = () => {
+    if (isLoading) {
+      return <LoadingButton color="#FFF" />;
+    }
+    return (
+      <ButtonLogin onPress={() => tryRegister()} underlayColor="#a37c00">
+        <ButtonLoginText>Cadastrar</ButtonLoginText>
+      </ButtonLogin>
+    );
+  };
+
+  const renderMessage = () => {
+    if (!message) {
+      return null;
     }
 
-    getMessageByErrorCode(errorCode) {
-        switch(errorCode) {
-            case 'auth/email-already-in-use':
-                return 'E-mail já está em uso';
-            case 'auth/invalid-email':
-                return 'E-mail inválido';
-            case 'auth/operation-not-allowed':
-                return 'Operação não permitida';
-            case 'auth/weak-password':
-                return 'Senha fraca';
-            default:
-                return errorCode;
-        }
-    }
+    return (
+      <ContainerError>
+        <ErrorText>{message}</ErrorText>
+      </ContainerError>
+    );
+  };
 
-    renderButton() {
-        if (this.state.isLoading)
-            return <LoadingButton color = "#FFF" />
-        return (
-            <ButtonLogin
-                onPress = { () => this.tryRegister() }
-                underlayColor = '#a37c00'>
-                <ButtonLoginText>Cadastrar</ButtonLoginText>
-            </ButtonLogin>
-        )
-    }
-    renderMessage() {
-        const { message } = this.state;
-
-        if(!message)
-            return null;
-
-        return (
-            <ContainerError>
-                <ErrorText>{ message }</ErrorText>
-            </ContainerError>
-        );
-    }
-
-    render() {
-        return (
-            <ContainerApp>
-            <ImageBackground source={ bookBackground } />
-                <CardLogin>
-                    <CardForm imagem = 'register' >
-                        <FormRow >
-                            <InputLogin
-                                placeholder = "user@mail.com"
-                                value = {this.state.mail}
-                                onChangeText = { value => this.onChangeHandler('mail', value)} />
-                        </FormRow>
-                        <FormRow last >
-                            <InputLogin
-                                placeholder = "********"
-                                value = {this.state.password}
-                                secureTextEntry
-                                onChangeText = { value => this.onChangeHandler('password', value)} 
-                            />
-                        </FormRow>
-                        { this.renderMessage() }
-                        { this.renderButton() }
-                    </CardForm>
-                </CardLogin>
-            </ContainerApp>
-        );
-    }
-};
-
-
+  return (
+    <ContainerApp>
+      <ImageBackground source={bookBackground} />
+      <CardLogin>
+        <CardForm imagem="register">
+          <FormRow>
+            <InputLogin
+              placeholderTextColor="#A3A3A3"
+              placeholder="Lancelot"
+              value={name}
+              onChangeText={name => setName(name)}
+            />
+          </FormRow>
+          <FormRow>
+            <InputLogin
+              placeholderTextColor="#A3A3A3"
+              placeholder="cavaleiro@tavola.com"
+              value={email}
+              onChangeText={mail => setEmail(mail)}
+            />
+          </FormRow>
+          <FormRow last>
+            <InputLogin
+              placeholderTextColor="#A3A3A3"
+              placeholder="********"
+              value={password}
+              secureTextEntry
+              onChangeText={pass => setPassword(pass)}
+            />
+          </FormRow>
+          {renderMessage()}
+          {renderButton()}
+        </CardForm>
+      </CardLogin>
+    </ContainerApp>
+  );
+}
 
 //make this component available to the app
-export default Login;
+export default Register;
