@@ -17,7 +17,7 @@ json-server --watch resources/db/mygrimorio.json
 Para executar na rede rode o comando
 
 ```
-json-server --host <IP_LOCAL> resources/db/mygrimorio.json
+json-server --host 192.168.15.46 resources/db/mygrimorio.json
 ```
 
 Agora basta acessar [http://localhost:3000/](http://localhost:3000/)

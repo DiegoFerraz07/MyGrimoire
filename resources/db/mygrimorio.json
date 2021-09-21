@@ -6648,38 +6648,13 @@
       "id": "ApZqh2lRENc43CpU3O9S8qthq4R2",
       "nome": "Diego",
       "email": "dihferraz-01@hotmail.com",
-<<<<<<< HEAD
       "password": "123456" 
-=======
-      "password": "123456"
->>>>>>> 8d656a2e283ab97c7fcb7b37fa300d7bc46ad794
     },
     {
       "id": "fm3svBMxXpgiOtGizKQ3FquGzCD3",
       "nome": "Randler",
       "email": "randlersi@gmail.com",
       "password": "123456"
-<<<<<<< HEAD
-=======
-    },
-    {
-      "id": "bb4602a1-25f2-496a-abcd-0b799533b90b",
-      "name": "askjdsha",
-      "email": "randlersi@gmail.com",
-      "password": "123456"
-    },
-    {
-      "id": "de397196-a94e-4a48-b452-1e2f11e86e57",
-      "name": "askjdsha",
-      "email": "randlersi@gmail.com",
-      "password": "123456"
-    },
-    {
-      "id": "245dd235-1df0-4f38-8d46-bff12a867e4b",
-      "name": "askjdsha",
-      "email": "randlersi@gmail.com",
-      "password": "123456"
->>>>>>> 8d656a2e283ab97c7fcb7b37fa300d7bc46ad794
     }
   ],
   "persons": [

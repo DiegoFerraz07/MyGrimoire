@@ -20,8 +20,8 @@ export const InputLogin = styled.TextInput`
   padding-top: 5;
   padding-left: 15;
   color: #fff;
-  border-bottomWidth: 1;
-  border-bottomColor: #5b4500;
+  border-bottom-width: 1;
+  border-bottom-color: #5b4500;
 `;
 
 export const ImageHeader = styled.Image`
@@ -80,49 +80,49 @@ export const TextFooterLogin = styled.Text`
   font-size: 16;
   font-weight: bold;
   color: #d6a200;
-  alignSelf: center;
+  align-self: center;
 `;
 
 export const LoadingButton = styled.ActivityIndicator`
-  backgroundColor: #d6a200;
-  borderWidth: 1;
-  borderColor: #5b4500;
-  marginHorizontal: 50;
-  marginTop: 10;
-  paddingTop: 10;
+  background-color: #d6a200;
+  border-width: 1;
+  border-color: #5b4500;
+  margin-horizontal: 50;
+  margin-top: 10;
+  padding-top: 10;
   padding-bottom: 10;
-  paddingLeft: 10;
+  padding-left: 10;
   padding-right: 10;
-  borderRadius: 5;
+  border-radius: 5;
 `;
 
 export const ButtonLogin = styled.TouchableOpacity`
-  backgroundColor: #d6a200;
-  borderWidth: 1;
-  borderColor: #5b4500;
-  marginHorizontal: 50;
-  marginTop: 10;
-  paddingTop: 10;
+  background-color: #d6a200;
+  border-width: 1;
+  border-color: #5b4500;
+  margin-horizontal: 50;
+  margin-top: 10;
+  padding-top: 10;
   padding-bottom: 10;
-  paddingLeft: 10;
+  padding-left: 10;
   padding-right: 10;
-  borderRadius: 5;
+  border-radius: 5;
 `;
 
 export const ButtonLoginText = styled.Text`
   color: #fff;
-  fontWeight: bold;
-  fontSize: 18;
-  alignSelf: center;
+  font-weight: bold;
+  font-size: 18;
+  align-self: center;
 `;
 
 export const ContainerError = styled.View`
-  marginvertical: 5;
+  margin-vertical: 5;
 `;
 
 export const ErrorText = styled.Text`
-  alignSelf: center;
+  align-self: center;
   color: #fff;
-  fontsize: 18;
-  fontweight: bold;
+  font-size: 18;
+  font-weight: bold;
 `;

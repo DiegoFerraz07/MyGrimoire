@@ -15,6 +15,7 @@ import {
   ErrorText,
   ContainerApp,
 } from './styles';
+import {useNavigation} from '@react-navigation/native';
 
 import CardForm from '../../components/cards/CardForm';
 import CardFormFooter from '../../components/cards/CardFormFooter';
@@ -28,6 +29,8 @@ const LOGO = require('../../../resources/img/5ered.png');
 
 // create a component
 function Login() {
+  const navigation = useNavigation();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -57,7 +60,7 @@ function Login() {
       console.log('error: not was possible persist the user data in phone');
     }
   };
-  const _retrieveData = async () => {
+  /*const _retrieveData = async () => {
     try {
       console.log('login', await AsyncStorage.getItem('@MyGrimorio:login'));
       const value =
@@ -79,7 +82,7 @@ function Login() {
     } catch (error) {
       return null;
     }
-  };
+  };*/
 
   async function logar() {
     setIsLoading(true);
@@ -89,12 +92,12 @@ function Login() {
     }
 
     await axios
-      .get('http://192.168.0.14:3000/users')
+      .get('http://192.168.15.46:3000/users')
       .then(response => {
         response.data.map(user => {
           if (user.email === email && user.password === password) {
             setUser(user);
-            return navigator.navigate('Dashboard', user);
+            return navigation.navigate('Dashboard', user);
           }
         });
       })
@@ -187,8 +190,7 @@ function Login() {
           {renderMessage()}
           {renderButton()}
         </CardForm>
-        <CardFormFooter
-          toScreen={() => this.props.navigation.navigate('register')}>
+        <CardFormFooter toScreen={() => navigation.navigate('Register')}>
           <TextFooterLogin>Cadastre-se</TextFooterLogin>
         </CardFormFooter>
       </CardLogin>

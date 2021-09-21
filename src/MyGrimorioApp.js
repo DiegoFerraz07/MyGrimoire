@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import Router from './Router';
 
-
-
-
 import thunk from 'redux-thunk';
 import {composeWithDevTools} from 'remote-redux-devtools';
 import {PersistGate} from 'redux-persist/integration/react';
@@ -11,8 +8,6 @@ import {PersistGate} from 'redux-persist/integration/react';
 import firebase from 'firebase';
 
 import {MenuProvider} from 'react-native-popup-menu';
-
-
 
 export class MyGrimorioApp extends Component {
   componentDidMount() {
@@ -30,11 +25,9 @@ export class MyGrimorioApp extends Component {
 
   render() {
     return (
-      
-        <MenuProvider>
-          <Router />
-        </MenuProvider>
-      
+      <MenuProvider>
+        <Router />
+      </MenuProvider>
     );
   }
 }
