@@ -32,7 +32,7 @@ export const ImageHeader = styled.Image`
   aspect-ratio: 1;
 `;
 export const TextLogoutHeader = styled.Text`
-  font-size: 8;
+  font-size: 8px;
   font-weight: bold;
   align-self: center;
   padding-right: 20;
@@ -62,7 +62,7 @@ export const ImageNothing = styled.Image`
 
 export const TextNothing = styled.Text`
   padding-top: 20;
-  font-size: 20;
+  font-size: 20px;
   color: #d6a200;
   font-weight: bold;
   align-self: center;
@@ -77,7 +77,7 @@ export const ImageBackground = styled.Image`
 `;
 
 export const TextFooterLogin = styled.Text`
-  font-size: 16;
+  font-size: 16px;
   font-weight: bold;
   color: #d6a200;
   align-self: center;
@@ -112,7 +112,7 @@ export const ButtonLogin = styled.TouchableOpacity`
 export const ButtonLoginText = styled.Text`
   color: #fff;
   font-weight: bold;
-  font-size: 18;
+  font-size: 18px;
   align-self: center;
 `;
 
@@ -123,6 +123,6 @@ export const ContainerError = styled.View`
 export const ErrorText = styled.Text`
   align-self: center;
   color: #fff;
-  font-size: 18;
+  font-size: 18px;
   font-weight: bold;
 `;
