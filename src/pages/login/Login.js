@@ -51,30 +51,32 @@ function Login() {
     console.log(mail, password);
   } */
 
-  const _storeData = async user => {
+  const _storeData = async token => {
     try {
-      console.log(JSON.stringify(user));
-      await AsyncStorage.setItem('@MyGrimorio:login', JSON.stringify(user));
-      console.log(await AsyncStorage.getItem('@MyGrimorio:login'));
+      await AsyncStorage.setItem('@MyGrimorio:token', JSON.stringify(token));
     } catch (error) {
       console.log('error: not was possible persist the user data in phone');
     }
   };
+
   /*const _retrieveData = async () => {
     try {
-      console.log('login', await AsyncStorage.getItem('@MyGrimorio:login'));
-      const value =
-        JSON.parse(await AsyncStorage.getItem('@MyGrimorio:login')) || false;
-      const expiration = value.user.stsTokenManager.expirationTime;
+      const value = JSON.parse(await AsyncStorage.getItem('@MyGrimorio:login')) || false;
+      //const expiration = value.user.stsTokenManager.expirationTime;
 
       if (value) {
+
+
         if (Date.now() > expiration) {
           this.logar(value.user.email, value.password);
+
         } else {
+
           this.setState({
             mail: value.user.email,
             password: value.password,
           });
+
           this.props.userLoginSuccess(value);
           return this.props.navigation.navigate('Dashboard');
         }
@@ -94,10 +96,11 @@ function Login() {
     await axios
       .get('http://192.168.15.46:3000/users')
       .then(response => {
-        response.data.map(user => {
-          if (user.email === email && user.password === password) {
-            setUser(user);
-            return navigation.navigate('Dashboard', user);
+        response.data.map(login => {
+          if (login.auth) {
+            // salvar token em storage
+            _storeData(login.token);
+            return navigation.navigate('Dashboard');
           }
         });
       })
