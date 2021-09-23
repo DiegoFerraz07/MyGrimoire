@@ -92,7 +92,7 @@ function Login() {
     }
 
     await axios
-      .get('http://192.168.15.46:3000/users')
+      .get('http://192.168.0.112:3000/users')
       .then(response => {
         response.data.map(user => {
           if (user.email === email && user.password === password) {
@@ -174,6 +174,7 @@ function Login() {
         <CardForm imagem="login">
           <FormRow first>
             <InputLogin
+              placeholderTextColor="#A3A3A3"
               placeholder="user@mail.com"
               value={email}
               onChangeText={email => setEmail(email)}
