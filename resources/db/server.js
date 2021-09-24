@@ -70,7 +70,14 @@ function getIdByToken(req) {
 
 app.get('/my-persons', verifyJWT, (req, res, next) => {
   let userId = getIdByToken(req);
-  return res.json(db.persons.find(person => person.id === userId));
+  let persons = db.persons.filter(person => person.id === userId);
+
+  const total = persons[0].my_persons.length;
+
+  return res.json({
+    persons: persons[0].my_persons,
+    total,
+  });
 });
 
 app.get('/person', verifyJWT, (req, res, next) => {
@@ -84,6 +91,50 @@ app.get('/person', verifyJWT, (req, res, next) => {
   }
 
   return res.json(myPerson);
+});
+
+app.get('/magics-person', verifyJWT, (req, res, next) => {
+  const userId = getIdByToken(req);
+  let persons = db.persons.find(person => person.id === userId);
+  let myPerson = persons.my_persons.find(
+    person => person.id === req.body.personId,
+  );
+  if (!myPerson) {
+    return res.status(404).json({message: 'Person not found!'});
+  }
+
+  const total = myPerson.myMagics.length;
+
+  return res.json({
+    myMagic: myPerson.myMagics,
+    total,
+  });
+});
+
+app.get('/specific-magic-person', verifyJWT, (req, res, next) => {
+  const userId = getIdByToken(req);
+  let persons = db.persons.find(person => person.id === userId);
+  let myPerson = persons.my_persons.find(
+    person => person.id === req.body.personId,
+  );
+  if (!myPerson) {
+    return res.status(404).json({message: 'Person not found!'});
+  }
+
+  let myMagic = myPerson.myMagics.filter(magic =>
+    magic.name.toLowerCase().includes(req.body.magicName.toLowerCase()),
+  );
+
+  if (!myMagic) {
+    return res.status(404).json({message: 'Magic not found!'});
+  }
+
+  const total = myMagic.length;
+
+  return res.json({
+    myMagic,
+    total,
+  });
 });
 
 const server = http.createServer(app);
