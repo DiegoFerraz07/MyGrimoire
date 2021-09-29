@@ -5251,7 +5251,7 @@ json-schema-traverse@^0.4.1:
 
 json-server@^0.16.3:
   version "0.16.3"
-  resolved "https://registry.npmjs.org/json-server/-/json-server-0.16.3.tgz"
+  resolved "https://registry.yarnpkg.com/json-server/-/json-server-0.16.3.tgz#75e0417bc346f5f221a74f4d2ce4b67f52204a8e"
   integrity sha512-tbsBONiefH7SR5EhSmK4EzwP3kCHuOduUq5hWAQjCwXTva4OBeKVcPrciHNWOK/+12ygtUnjuWcAxuHgqTuBLA==
   dependencies:
     body-parser "^1.19.0"

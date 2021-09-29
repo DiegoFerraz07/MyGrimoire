@@ -61,24 +61,20 @@ function Login() {
 
   /*const _retrieveData = async () => {
     try {
-      const value = JSON.parse(await AsyncStorage.getItem('@MyGrimorio:login')) || false;
-      //const expiration = value.user.stsTokenManager.expirationTime;
-
+      const value =
+        JSON.stringify(await AsyncStorage.getItem(email, password)) || false;
+      const expiration = value.user.stsTokenManager.expirationTime;
+      console.log(value);
       if (value) {
-
-
         if (Date.now() > expiration) {
-          this.logar(value.user.email, value.password);
-
+          logar(value.user.email, value.password);
         } else {
-
-          this.setState({
+          setUser({
             mail: value.user.email,
             password: value.password,
           });
 
-          this.props.userLoginSuccess(value);
-          return this.props.navigation.navigate('Dashboard');
+          return navigation.navigate('Dashboard');
         }
       }
     } catch (error) {
@@ -94,15 +90,13 @@ function Login() {
     }
 
     await axios
-      .get('http://192.168.0.112:3000/users')
+      .post('http://192.168.0.112:3000/users', {email, password})
       .then(response => {
-        response.data.map(login => {
-          if (login.auth) {
-            // salvar token em storage
-            _storeData(login.token);
-            return navigation.navigate('Dashboard');
-          }
-        });
+        if (response.data.auth) {
+          // salvar token em storage
+          _storeData(response.data.token);
+          return navigation.navigate('Dashboard');
+        }
       })
       .catch(error => {
         console.log(error);
