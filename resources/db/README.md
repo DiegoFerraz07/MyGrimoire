@@ -17,7 +17,7 @@ json-server --watch resources/db/mygrimorio.json
 Para executar na rede rode o comando
 
 ```
-json-server --host 192.168.0.112 resources/db/mygrimorio.json
+node resources/db/server.js --trace-warning
 
 ```
 

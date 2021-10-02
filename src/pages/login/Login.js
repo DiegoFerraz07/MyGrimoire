@@ -53,7 +53,7 @@ function Login() {
 
   const _storeData = async token => {
     try {
-      await AsyncStorage.setItem('@MyGrimorio:token', JSON.stringify(token));
+      await AsyncStorage.setItem('@MyGrimorio:token', token);
     } catch (error) {
       console.log('error: not was possible persist the user data in phone');
     }
@@ -90,10 +90,11 @@ function Login() {
     }
 
     await axios
-      .post('http://192.168.0.112:3000/users', {email, password})
+      .post('https://mygrimoire-api.herokuapp.com/login', {email, password})
       .then(response => {
         if (response.data.auth) {
           // salvar token em storage
+          console.log(response.data);
           _storeData(response.data.token);
           return navigation.navigate('Dashboard');
         }

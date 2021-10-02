@@ -11,6 +11,7 @@ import firebase from 'firebase';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import {connect} from 'react-redux';
+import axios from 'axios';
 
 import CardPersonagem from '../../components/cards/CardPersonagem';
 import AddPersonagem from '../../components/AddPersonagem';
@@ -35,14 +36,14 @@ class Dashboard extends Component {
     console.ignoredYellowBox = ['Setting a timer'];
 
     this.state = {
-      idUser: '',
+      persons: [],
       dataStorage: true,
       refreshing: false,
     };
   }
 
   componentDidMount() {
-    this.props.navigation.setParams({logout: this.logout});
+    //this.props.navigation.setParams({logout: this.logout});
     this.getPersonsFireBase();
   }
 
@@ -53,26 +54,56 @@ class Dashboard extends Component {
       console.log('error: not was possible persist the user data in phone');
     }
   };
-  _removeData = async store => {
+
+  async getTokenStorage() {
     try {
-      await AsyncStorage.removeItem(store);
+      const token = (await AsyncStorage.getItem('@MyGrimorio:token')) || false;
+      console.log('pegando token do async:', token);
+      return token;
+    } catch (error) {
+      return false;
+    }
+  }
+
+  _removeData = async () => {
+    try {
+      await AsyncStorage.removeItem('@MyGrimorio:token');
     } catch (error) {
       console.log('error: not was possible persist the user data in phone');
     }
   };
 
-  getPersonsFireBase() {
-    const idUser = this.props.user.id;
-
-    var persons = firebase
-      .database()
-      .ref('persons')
-      .child('' + idUser);
-
-    persons.once('value', snapshot => {
-      const person = snapshot.val();
-      this.props.setPersons(person);
-    });
+  async getPersonsFireBase() {
+    const token = await this.getTokenStorage();
+    console.log(token);
+    if (!token) {
+      //não tem token registrado e não pode acessar o dashboard, redirecionar para login
+      this.logout();
+    }
+    const config = {
+      //params: {personId},
+      headers: {
+        'Content-Type': 'application/json',
+        'x-access-token': token,
+      },
+    };
+    console.log(config);
+    await axios
+      .get('https://mygrimoire-api.herokuapp.com/my-persons', config)
+      .then(response => {
+        if (response.data.persons) {
+          // salvar token em storage
+          const {persons} = response.data;
+          console.log('persons', persons);
+          this.setState({persons});
+        }
+      })
+      .catch(error => {
+        console.log(
+          'erro ao tentar solicitar meus personagens:',
+          error.response,
+        );
+      });
   }
 
   static navigationOptions = ({navigation}) => {
@@ -90,7 +121,7 @@ class Dashboard extends Component {
     this.props
       .tryLogout()
       .then(() => {
-        this._removeData('@MyGrimorio:login');
+        this._removeData();
         this.props.navigation.navigate('Login');
       })
       .catch(() => {
@@ -105,18 +136,18 @@ class Dashboard extends Component {
   }
 
   renderDashboard() {
-    if (this.props.persons && Object.entries(this.props.persons).length == 0) {
+    if (this.state.persons && this.state.persons.length == 0) {
       return (
         <ContainerLoading>
           <ActivityIndicator size="large" color="#D6A200" />
         </ContainerLoading>
       );
-    } else if (this.props.persons) {
-      return Object.entries(this.props.persons).map((personagem, key) => (
+    } else if (this.state.persons) {
+      return this.state.persons.map((personagem, key) => (
         <TouchableOpacity
-          key={personagem[0]}
-          onPress={() => this.navigateToPerson(personagem[0])}>
-          <CardPersonagem personagem={personagem[1]} />
+          key={personagem.id}
+          onPress={() => this.navigateToPerson(personagem.id)}>
+          <CardPersonagem personagem={personagem} />
         </TouchableOpacity>
       ));
     } else {
@@ -133,9 +164,7 @@ class Dashboard extends Component {
     return (
       <ContainerApp
         nothing={
-          this.props.persons && Object.entries(this.props.persons).length == 0
-            ? true
-            : false
+          this.state.persons && this.state.persons.length == 0 ? true : false
         }>
         <ScrollView
           refreshControl={

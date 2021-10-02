@@ -5,7 +5,7 @@ const http = require('http');
 const express = require('express');
 const app = express();
 
-const IP = '192.168.0.101';
+const IP = 'https://mygrimoire-api.herokuapp.com/';
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
@@ -33,9 +33,6 @@ app.post('/login', (req, res, next) => {
   } else {
     return res.status(401).json({error: 'Invalid credentials'});
   }
-
-  // eslint-disable-next-line no-unreachable
-  return res.status(500).json({message: 'Login inválido!'});
 });
 
 app.post('/logout', function (req, res) {
